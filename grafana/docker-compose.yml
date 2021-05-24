@@ -1,0 +1,13 @@
+version: "3"
+services:
+  grafana:
+    image: grafana/grafana
+    restart: always
+    ports:
+      - 3000:3000
+    environment:
+      # Set server IP here (or DNS name)
+      - "GF_SERVER_ROOT_URL=http://192.168.1.11:3000"
+      - "GF_SECURITY_ADMIN_PASSWORD=changeme"
+      # Enable this to be able to see the graphs (readonly) without having to login
+      - "GF_AUTH_ANONYMOUS_ENABLED=true"
