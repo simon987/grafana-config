@@ -1,5 +1,5 @@
 influxdb:
-    image: influxdb:latest
+    image: influxdb:1.7-alpine
     restart: always
     ports:
       - "8086:8086"
